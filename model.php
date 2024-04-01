@@ -37,4 +37,18 @@ class Database {
             "state"     => $state,
         ]);
     }
+
+    public function readAll() {
+        $db = $this->getconnexion();
+        $exec = $db->query("SELECT * FROM factures ORDER BY id");
+        $data = $exec->fetchAll(PDO::FETCH_OBJ);
+        return $data;
+    }
+
+    public function countBills(): int {
+        $db = $this->getconnexion();
+        $query = $db->query("SELECT COUNT(*) AS count FROM factures");
+        $data = $query->fetch();
+        return $data[0];
+    }
 }

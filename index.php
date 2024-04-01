@@ -85,7 +85,7 @@
             <div class="dropdown-divider border-warning"></div>
             <div class="row">
                 <div class="table-responsive" id="orderTable">
-                    <table id="datatable" class="table table-striped">
+                    <!-- <table id="datatable" class="table table-striped">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -99,7 +99,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php for($i = 0; $i < 100; $i++): ?>
                             <tr>
                                 <th scope="row"><?= $i ?></th>
                                 <td>Mark</td>
@@ -114,9 +113,9 @@
                                     <a href="#" class="text-danger me-2 deleteBtn" title="Supprimer"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
-                            <?php endfor ?>
                         </tbody>
-                    </table>
+                    </table> -->
+                    <h3 class="text-success text-center">Chargement des factures ...</h3>
                 </div>
             </div>
         </section>

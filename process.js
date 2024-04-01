@@ -22,10 +22,28 @@ $(function() {
                         title: "Your work has been saved",
                         // showConfirmButton: false,
                         // timer: 1500
-                      });
+                    });
                     formOrder[0].reset();
                 }
             });
         }
     })
+
+
+    /** Recuperation des factures */
+    function getBills() {
+        $.ajax({
+            url: 'process.php',
+            type: 'post',
+            data: {action: 'fetch'},
+            success: function(response) {
+                console.log(response);
+                $("#orderTable").html(response);
+                $('table').DataTable();
+            }
+        });
+    }
+
+
+    getBills();
 })
