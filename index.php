@@ -77,7 +77,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="d-flex justify-content-end">
-                        <button class="btn btn-primary btn-sm me-3"><i class="fas fa-folder-plus"></i> Nouveau</button>
+                        <button class="btn btn-primary btn-sm me-3" data-bs-toggle="modal" data-bs-target="#createModal"><i class="fas fa-folder-plus"></i> Nouveau</button>
                         <a id="export" href="" class="btn btn-success btn-sm"><i class="fas fa-table"></i> Exporter</a>
                     </div>
                 </div>
@@ -120,6 +120,63 @@
                 </div>
             </div>
         </section>
+
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary">
+            Launch demo modal
+        </button> -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createModalLabel">Nouvelle facture</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="POST" id="formOrder">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="customer" name="customer"/>
+                                <label for="customer">Nom du client</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="cashier" name="cashier"/>
+                                <label for="cashier">Nom du caissier</label>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="amount" name="amount"/>
+                                        <label for="amount">Montant</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="received" name="received"/>
+                                        <label for="received">Montant perçu</label>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="form-floating mb-3">
+                                        <select class="form-select" id="state" aria-label="state" name="state">
+                                            <option value="Facturé">Facturé</option>
+                                            <option value="Payée">Payée</option>
+                                            <option value="Annulée">Annulée</option>
+                                        </select>
+                                        <label for="state">Etat</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                        <button id="create" type="button" class="btn btn-primary" name="create">Ajouter <i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Optional JavaScript; choose one of the two! -->
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->

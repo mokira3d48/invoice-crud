@@ -1,10 +1,3 @@
-# invoice-crud
-Implementation of an invoice management program in PHP + MySQL using AJAX.
-
-
-## Databse creation
-
-```sql
 START TRANSACTION;
 
 CREATE DATABASE IF NOT EXISTS crud_facture CHARACTER SET 'utf8';
@@ -26,18 +19,3 @@ CREATE TABLE IF NOT EXISTS factures (
 )ENGINE=InnoDB;
 
 COMMIT;
-
-```
-
-OR execute the following command line.
-
-```sh
-mysql -u root -p < database.sql
-```
-
-## Start server
-You can start the web server using the following command line.
-
-```sh
-php -S 0.0.0.0:8080
-```
