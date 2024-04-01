@@ -1,4 +1,10 @@
 <!doctype html>
+<!-- https://developers.google.com/speed/libraries?hl=fr#jquery -->
+<!-- https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+<!-- https://datatables.net/download/index -->
+<!-- https://fontawesome.com/download -->
+<!-- https://cdnjs.com/ -->
+<!-- https://www.jsdelivr.com/package/npm/sweetalert2 -->
 <html lang="en">
     <head>
         <!-- Required meta tags -->
