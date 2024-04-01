@@ -1,5 +1,13 @@
 # invoice-crud
+![](https://img.shields.io/badge/lastest-2024--04--01-success)
+![](https://img.shields.io/badge/programming-AJAX-yellow)
+![](https://img.shields.io/badge/architecture-MVC-blue)
+
 Implementation of an invoice management program in PHP + MySQL using AJAX.
+
+<div align="center">
+    <img src="./images/Screenshot_20240401_232351.png"/>
+</div>
 
 
 ## Databse creation
