@@ -39,7 +39,7 @@ $(function() {
             success: function(response) {
                 console.log(response);
                 $("#orderTable").html(response);
-                $('table').DataTable();
+                $('table').DataTable({order: [0, 'desc']});
             }
         });
     }
