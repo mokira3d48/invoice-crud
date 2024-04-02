@@ -66,3 +66,11 @@ if (isset($_POST['action']) && $_POST['action'] === 'fetch') {
     echo $output;
 
 }
+
+
+/** Info sur details de facture */
+if (isset($_POST['workingId'])) {
+    $workingId = intval($_POST['workingId']);
+    $currentBill = $db->getBillDetails($workingId);
+    echo json_encode($currentBill);
+}

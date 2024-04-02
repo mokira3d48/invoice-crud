@@ -30,6 +30,30 @@ $(function() {
     })
 
 
+    $('body').on('click', '.editBtn', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'process.php',
+            type: 'post',
+            data: {workingId: this.dataset.id},
+            success: function(response) {
+                // console.log(response);
+                let billDetails = JSON.parse(response);
+                $('#update-customer').val(billDetails.customer);
+                $('#update-cashier').val(billDetails.cashier);
+                $('#update-amount').val(billDetails.amount);
+                $('#update-received').val(billDetails.received);
+                
+                let select = document.querySelector('#update-state');
+                let stateOptions = Array.from(select.options);
+                stateOptions.forEach((o, i) => {
+                    if (o.value === billDetails.state)
+                        select.selectedIndex = i;
+                })
+            }
+        })
+    })
+
     /** Recuperation des factures */
     function getBills() {
         $.ajax({
@@ -37,7 +61,7 @@ $(function() {
             type: 'post',
             data: {action: 'fetch'},
             success: function(response) {
-                console.log(response);
+                // console.log(response);
                 $("#orderTable").html(response);
                 $('table').DataTable({order: [0, 'desc']});
             }

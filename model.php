@@ -51,4 +51,12 @@ class Database {
         $data = $query->fetch();
         return $data[0];
     }
+
+    public function getBillDetails(int $pk) {
+        $con = $this->getconnexion();
+        $query = $con->prepare(
+            "SELECT * FROM factures WHERE id=:pk");
+        $query->execute(["pk"  => $pk]);
+        return $query->fetch(PDO::FETCH_OBJ);
+    }
 }
